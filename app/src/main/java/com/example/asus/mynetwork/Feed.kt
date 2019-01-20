@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Feed : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
@@ -20,6 +21,30 @@ class Feed : AppCompatActivity() {
 
         Glide.with(this).load(R.drawable.my_net_work_logo).apply(RequestOptions.centerCropTransform())
             .into(findViewById(R.id.backdrop))
+
+
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.all ->{
+                    updateActivity(feed)
+                }
+
+                R.id.notification ->{
+                    val data: List<New> =
+                        feed.filter { i -> i.type.findAnyOf(listOf("Notification")) != null }
+                    updateActivity(data)
+                }
+
+                R.id.news ->{
+                    val data: List<New> =
+                        feed.filter { i -> i.type.findAnyOf(listOf("News")) != null }
+                    updateActivity(data)
+                }
+            }
+            true
+        }
 
         updateActivity(feed)
 
@@ -85,3 +110,6 @@ class Feed : AppCompatActivity() {
 
 
 }
+
+
+/*   */

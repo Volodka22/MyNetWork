@@ -10,4 +10,5 @@
     <string name="text">здесь находится текст</string>
     <string name="notification">Уведомление</string>
     <string name="news_name">Новость</string>
+    <string name="feed">Лента</string>
 </resources>
