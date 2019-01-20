@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyNetWork</string>
+    <string name="enter_login">логин</string>
+    <string name="password">Пароль</string>
+    <string name="sign_in">Войти</string>
+    <string name="password_or_login_is_incorrect">Проль или логин введены неверно</string>
+    <string name="login_and_password_is_empty">Введите логин и пароль</string>
+    <string name="password_is_empty">Введите пароль</string>
+    <string name="login_is_empty">Введите логин</string>
+</resources>
