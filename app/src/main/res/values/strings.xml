@@ -7,4 +7,7 @@
     <string name="login_and_password_is_empty">Введите логин и пароль</string>
     <string name="password_is_empty">Введите пароль</string>
     <string name="login_is_empty">Введите логин</string>
+    <string name="text">здесь находится текст</string>
+    <string name="notification">Уведомление</string>
+    <string name="news_name">Новость</string>
 </resources>

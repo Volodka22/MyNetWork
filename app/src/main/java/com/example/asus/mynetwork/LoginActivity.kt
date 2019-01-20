@@ -1,5 +1,6 @@
 package com.example.asus.mynetwork
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -18,13 +19,13 @@ class LoginActivity : AppCompatActivity() {
                     getString(com.example.asus.mynetwork.R.string.login_and_password_is_empty),
                     Snackbar.LENGTH_SHORT
                 ).show()
-            else if(password.text.toString() == "")
+            else if (password.text.toString() == "")
                 Snackbar.make(
                     consLay,
                     getString(com.example.asus.mynetwork.R.string.password_is_empty),
                     Snackbar.LENGTH_SHORT
                 ).show()
-            else if(login.text.toString() == "")
+            else if (login.text.toString() == "")
                 Snackbar.make(
                     consLay,
                     getString(com.example.asus.mynetwork.R.string.login_is_empty),
@@ -36,7 +37,8 @@ class LoginActivity : AppCompatActivity() {
                     getString(com.example.asus.mynetwork.R.string.password_or_login_is_incorrect),
                     Snackbar.LENGTH_SHORT
                 ).show()
-
+            else
+                startActivity(Intent(this, Feed::class.java))
 
 
         }
